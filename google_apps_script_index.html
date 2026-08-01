@@ -8,27 +8,51 @@
   <!-- Modern Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   
   <style>
 /* ==========================================================================
    CONTROL VIAL - SEGURIDAD ATLAS (ZONA CARIBE)
-   100% Responsive Ultra-Modern Enterprise Design System
-   Zero-Horizontal-Scroll Guaranteed for All Mobile & Tablet Devices
+   Paleta Oficial Atlas: Rojo Institucional (#D3131A), Azul Rey (#0A68A8), 
+   Azul Marino (#082B49) y Celeste Órbita (#29A9E0)
+   100% Responsive Enterprise Design System & Zero Horizontal Scroll
    ========================================================================== */
 
 :root {
-  /* Brand Color Palette */
-  --primary-navy: #09172a;
-  --primary-navy-card: #0e2038;
-  --primary-blue: #1d68ff;
-  --primary-blue-hover: #0c54e8;
-  --primary-blue-glow: rgba(29, 104, 255, 0.35);
-  --primary-blue-light: #eef4ff;
+  /* Rojo Institucional Atlas */
+  --atlas-red: #d3131a;
+  --atlas-red-bright: #ee2726;
+  --atlas-red-dark: #8b0d11;
+  --atlas-red-glow: rgba(211, 19, 26, 0.35);
+  --atlas-red-light: #fef2f2;
+  --atlas-red-border: #fecaca;
+
+  /* Azul Rey Corporativo Atlas */
+  --atlas-blue: #0a68a8;
+  --atlas-blue-hover: #08568c;
+  --atlas-blue-bright: #1e98d7;
+  --atlas-blue-glow: rgba(10, 104, 168, 0.35);
+  --atlas-blue-light: #f0f7fc;
+  --atlas-blue-border: #bae6fd;
+
+  /* Azul Marino Institucional (Fondos y Contraste) */
+  --atlas-navy: #082b49;
+  --atlas-navy-card: #0d3455;
+  --atlas-navy-deep: #041829;
+  --atlas-navy-light: #164268;
+
+  /* Azul Celeste / Cyan (Órbita & Lema Atlas) */
+  --atlas-cyan: #0077b6;
+  --atlas-cyan-light: #29a9e0;
+  --atlas-cyan-glow: rgba(41, 169, 224, 0.3);
+
+  /* Sistema Semántico */
+  --primary-blue: var(--atlas-blue);
+  --primary-blue-hover: var(--atlas-blue-hover);
+  --primary-blue-light: var(--atlas-blue-light);
+  --primary-navy: var(--atlas-navy);
 
   --accent-amber: #f59e0b;
-  --accent-amber-hover: #d97706;
-  --accent-amber-glow: rgba(245, 158, 11, 0.3);
   --accent-gold: #fbbf24;
 
   --success-emerald: #10b981;
@@ -36,54 +60,49 @@
   --success-bg: #ecfdf5;
   --success-border: #a7f3d0;
 
-  --danger-crimson: #ef4444;
-  --danger-bg: #fef2f2;
-  --danger-border: #fecaca;
+  --danger-crimson: var(--atlas-red);
+  --danger-bg: var(--atlas-red-light);
+  --danger-border: var(--atlas-red-border);
 
-  /* Surfaces & Backgrounds */
-  --bg-dark: #070f1e;
-  --bg-gradient: radial-gradient(circle at 50% 0%, #112544 0%, #081324 60%, #040912 100%);
+  /* Superficies & Fondos */
+  --bg-gradient: radial-gradient(circle at 50% 0%, #0e375c 0%, #082b49 55%, #041829 100%);
   --card-bg: rgba(255, 255, 255, 0.98);
-  --card-glass: rgba(255, 255, 255, 0.92);
-  --card-border: rgba(226, 232, 240, 0.9);
+  --card-border: rgba(226, 232, 240, 0.95);
   --input-bg: #f8fafc;
   --input-bg-focus: #ffffff;
   --input-border: #cbd5e1;
-  --input-border-focus: #1d68ff;
+  --input-border-focus: var(--atlas-blue);
 
-  /* Typography */
+  /* Tipografía */
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-heading: 'Outfit', sans-serif;
-  --text-dark: #0f172a;
-  --text-secondary: #475569;
+  --font-tagline: 'Caveat', cursive;
+  --text-dark: #082b49;
+  --text-secondary: #334155;
   --text-muted: #64748b;
   --text-light: #f8fafc;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 20px 40px -10px rgba(9, 23, 42, 0.15), 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
-  --shadow-blue-glow: 0 0 25px rgba(29, 104, 255, 0.35);
+  /* Sombras */
+  --shadow-sm: 0 2px 6px rgba(8, 43, 73, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(8, 43, 73, 0.1), 0 4px 8px -2px rgba(8, 43, 73, 0.04);
+  --shadow-lg: 0 20px 40px -10px rgba(4, 24, 41, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 25px 50px -12px rgba(4, 24, 41, 0.45);
+  --shadow-blue-glow: 0 0 22px rgba(10, 104, 168, 0.4);
+  --shadow-red-glow: 0 0 22px rgba(211, 19, 26, 0.4);
 
-  /* Radius */
+  /* Bordes & Curvaturas */
   --radius-xs: 6px;
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 9999px;
 
-  /* Transitions */
+  /* Transiciones */
   --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ==========================================================================
-   CSS Reset & Responsive Anti-Overflow Setup
-   ========================================================================== */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -98,7 +117,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  background-color: #070f1e;
+  background-color: var(--atlas-navy-deep);
 }
 
 body {
@@ -118,23 +137,21 @@ body {
   position: relative;
 }
 
-/* Safe responsive media */
 img, video, canvas, svg {
   max-width: 100%;
   height: auto;
   box-sizing: border-box;
 }
 
-/* Atmospheric Ambient Lighting (Contained to avoid overflow) */
 body::before {
   content: '';
   position: fixed;
-  top: -150px;
+  top: -160px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(700px, 90vw);
-  height: min(700px, 90vw);
-  background: radial-gradient(circle, rgba(29, 104, 255, 0.18) 0%, rgba(245, 158, 11, 0.08) 45%, transparent 70%);
+  width: min(720px, 90vw);
+  height: min(720px, 90vw);
+  background: radial-gradient(circle, rgba(30, 152, 215, 0.22) 0%, rgba(211, 19, 26, 0.12) 45%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -142,18 +159,15 @@ body::before {
 body::after {
   content: '';
   position: fixed;
-  bottom: -150px;
+  bottom: -160px;
   right: 0;
-  width: min(450px, 70vw);
-  height: min(450px, 70vw);
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  width: min(500px, 75vw);
+  height: min(500px, 75vw);
+  background: radial-gradient(circle, rgba(0, 119, 182, 0.16) 0%, rgba(10, 104, 168, 0.08) 50%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* ==========================================================================
-   Main App Container
-   ========================================================================== */
 .app-container {
   width: 100%;
   max-width: 860px;
@@ -164,14 +178,11 @@ body::after {
   overflow-x: hidden;
 }
 
-/* ==========================================================================
-   Corporate Header Card
-   ========================================================================== */
 .header-card, .app-header {
-  background: linear-gradient(135deg, rgba(14, 32, 56, 0.92) 0%, rgba(9, 23, 42, 0.98) 100%);
+  background: linear-gradient(135deg, rgba(13, 52, 85, 0.95) 0%, rgba(8, 43, 73, 0.98) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: clamp(14px, 3vw, var(--radius-lg));
   padding: clamp(18px, 4vw, 30px) clamp(14px, 4vw, 28px);
   text-align: center;
@@ -190,7 +201,7 @@ body::after {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #1d68ff 0%, #f59e0b 50%, #10b981 100%);
+  background: linear-gradient(90deg, var(--atlas-red) 0%, var(--atlas-red-bright) 30%, var(--atlas-blue-bright) 70%, var(--atlas-blue) 100%);
 }
 
 .header-top-meta {
@@ -207,22 +218,23 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(245, 158, 11, 0.14);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  color: var(--accent-gold);
-  padding: 4px 10px;
+  background: rgba(211, 19, 26, 0.18);
+  border: 1px solid rgba(238, 39, 38, 0.45);
+  color: #ffffff;
+  padding: 5px 12px;
   border-radius: var(--radius-pill);
-  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  font-size: clamp(0.72rem, 2vw, 0.82rem);
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.15);
+  box-shadow: 0 0 14px rgba(211, 19, 26, 0.25);
 }
 
 .brand-badge svg {
-  width: 15px;
-  height: 15px;
-  fill: currentColor;
+  width: 16px;
+  height: 16px;
+  fill: var(--atlas-red-bright);
+  filter: drop-shadow(0 0 4px rgba(238, 39, 38, 0.6));
   flex-shrink: 0;
 }
 
@@ -230,10 +242,10 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #34d399;
-  padding: 4px 10px;
+  background: rgba(41, 169, 224, 0.14);
+  border: 1px solid rgba(41, 169, 224, 0.35);
+  color: #7dd3fc;
+  padding: 5px 12px;
   border-radius: var(--radius-pill);
   font-size: clamp(0.68rem, 2vw, 0.76rem);
   font-weight: 700;
@@ -244,22 +256,22 @@ body::after {
   content: '';
   width: 6px;
   height: 6px;
-  background-color: #34d399;
+  background-color: var(--atlas-cyan-light);
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 6px #34d399;
+  box-shadow: 0 0 8px var(--atlas-cyan-light);
   animation: pulse-dot 2s infinite ease-in-out;
   flex-shrink: 0;
 }
 
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 0.35; transform: scale(0.8); }
 }
 
 .header-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.25rem, 4.2vw, 1.9rem);
+  font-size: clamp(1.25rem, 4.2vw, 1.95rem);
   font-weight: 900;
   color: #ffffff;
   letter-spacing: -0.4px;
@@ -270,13 +282,13 @@ body::after {
 }
 
 .header-title span {
-  background: linear-gradient(135deg, #ffffff 40%, #93c5fd 100%);
+  background: linear-gradient(135deg, #ffffff 30%, var(--atlas-blue-bright) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .header-subtitle {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.82);
   font-size: clamp(0.78rem, 2vw, 0.92rem);
   font-weight: 500;
   max-width: 580px;
@@ -286,9 +298,6 @@ body::after {
   overflow-wrap: break-word;
 }
 
-/* ==========================================================================
-   Multi-Step Wizard Progress Stepper
-   ========================================================================== */
 .stepper-wrapper {
   background: var(--card-bg);
   border-radius: clamp(12px, 2.5vw, var(--radius-md));
@@ -328,25 +337,26 @@ body::after {
 }
 
 .stepper-title-info span:first-child {
-  color: var(--accent-amber);
+  color: var(--atlas-red);
   font-size: clamp(0.7rem, 1.8vw, 0.78rem);
   font-weight: 800;
   letter-spacing: 0.5px;
 }
 
 .stepper-current-name {
-  color: var(--primary-blue);
+  color: var(--atlas-blue);
   font-weight: 800;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .stepper-pct-badge {
-  background: var(--primary-blue-light);
-  color: var(--primary-blue);
+  background: var(--atlas-blue-light);
+  color: var(--atlas-blue);
+  border: 1px solid var(--atlas-blue-border);
   font-weight: 800;
   font-size: clamp(0.7rem, 1.8vw, 0.78rem);
-  padding: 3px 8px;
+  padding: 3px 9px;
   border-radius: var(--radius-pill);
   flex-shrink: 0;
   white-space: nowrap;
@@ -377,12 +387,12 @@ body::after {
   top: clamp(15px, 2.5vw, 18px);
   left: 14px;
   height: 3px;
-  background: linear-gradient(90deg, #1d68ff 0%, #f59e0b 100%);
+  background: linear-gradient(90deg, var(--atlas-red) 0%, var(--atlas-blue-bright) 50%, var(--atlas-blue) 100%);
   border-radius: 4px;
   z-index: 0;
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   width: 0%;
-  box-shadow: 0 0 8px rgba(29, 104, 255, 0.4);
+  box-shadow: 0 0 10px rgba(10, 104, 168, 0.45);
 }
 
 .step-item {
@@ -428,21 +438,22 @@ body::after {
 }
 
 .step-item:hover .step-circle {
-  border-color: var(--primary-blue);
+  border-color: var(--atlas-blue);
 }
 
 .step-item.active .step-circle {
-  background: linear-gradient(135deg, #1d68ff, #0c54e8);
+  background: linear-gradient(135deg, var(--atlas-blue-bright) 0%, var(--atlas-blue) 100%);
   border-color: #ffffff;
   color: #ffffff;
-  box-shadow: var(--shadow-blue-glow), 0 0 0 3px rgba(29, 104, 255, 0.2);
+  box-shadow: var(--shadow-blue-glow), 0 0 0 3px rgba(10, 104, 168, 0.25);
   transform: scale(1.08);
 }
 
 .step-item.completed .step-circle {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, var(--atlas-red-bright) 0%, var(--atlas-red) 100%);
   border-color: #ffffff;
   color: #ffffff;
+  box-shadow: 0 0 10px rgba(211, 19, 26, 0.35);
 }
 
 .step-item.completed .step-circle span {
@@ -467,18 +478,15 @@ body::after {
 }
 
 .step-item.active .step-label {
-  color: var(--primary-blue);
+  color: var(--atlas-blue);
   font-weight: 800;
 }
 
 .step-item.completed .step-label {
-  color: var(--text-dark);
+  color: var(--atlas-navy);
   font-weight: 700;
 }
 
-/* ==========================================================================
-   Card Section Panel
-   ========================================================================== */
 .form-card {
   background: var(--card-bg);
   border-radius: clamp(14px, 3vw, var(--radius-lg));
@@ -524,9 +532,9 @@ body::after {
   width: clamp(38px, 5.5vw, 46px);
   height: clamp(38px, 5.5vw, 46px);
   border-radius: clamp(10px, 2vw, 12px);
-  background: linear-gradient(135deg, rgba(29, 104, 255, 0.12), rgba(245, 158, 11, 0.12));
-  border: 1px solid rgba(29, 104, 255, 0.2);
-  color: var(--primary-blue);
+  background: linear-gradient(135deg, rgba(10, 104, 168, 0.12), rgba(211, 19, 26, 0.08));
+  border: 1.5px solid rgba(10, 104, 168, 0.25);
+  color: var(--atlas-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -544,7 +552,7 @@ body::after {
   font-family: var(--font-heading);
   font-size: clamp(1.05rem, 2.8vw, 1.28rem);
   font-weight: 800;
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   letter-spacing: -0.3px;
   line-height: 1.25;
   word-break: break-word;
@@ -558,9 +566,6 @@ body::after {
   word-break: break-word;
 }
 
-/* ==========================================================================
-   Responsive Grid & Form Layout
-   ========================================================================== */
 .form-row-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -582,14 +587,14 @@ body::after {
   gap: 4px;
   font-size: clamp(0.82rem, 2vw, 0.9rem);
   font-weight: 700;
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   margin-bottom: 6px;
   line-height: 1.3;
   word-break: break-word;
 }
 
 .form-label span.req, .form-label .req {
-  color: var(--danger-crimson);
+  color: var(--atlas-red);
   font-weight: 800;
   margin-left: 2px;
 }
@@ -625,10 +630,10 @@ body::after {
   max-width: 100%;
   min-height: 48px;
   padding: 12px 14px 12px 42px;
-  font-size: 16px; /* Avoids automatic zoom on mobile devices */
+  font-size: 16px;
   font-family: inherit;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--atlas-navy);
   background-color: var(--input-bg);
   border: 1.5px solid var(--input-border);
   border-radius: clamp(10px, 2vw, var(--radius-md));
@@ -646,15 +651,15 @@ body::after {
 
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--primary-blue);
+  border-color: var(--atlas-blue);
   background-color: var(--input-bg-focus);
-  box-shadow: 0 0 0 3px rgba(29, 104, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(10, 104, 168, 0.18);
 }
 
 .form-control.input-error,
 .form-select.input-error {
-  border-color: var(--danger-crimson);
-  background-color: var(--danger-bg);
+  border-color: var(--atlas-red);
+  background-color: var(--atlas-red-light);
   animation: shake 0.3s ease;
 }
 
@@ -666,7 +671,7 @@ body::after {
 
 .form-control:focus + .input-icon,
 .input-wrapper:focus-within .input-icon {
-  color: var(--primary-blue);
+  color: var(--atlas-blue);
 }
 
 .form-control.uppercase {
@@ -681,7 +686,7 @@ body::after {
 
 .form-select {
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230a68a8' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 16px;
@@ -703,9 +708,6 @@ body::after {
   word-break: break-word;
 }
 
-/* ==========================================================================
-   Custom Radio Toggle Buttons (Owner Selector)
-   ========================================================================== */
 .toggle-group {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -761,25 +763,22 @@ body::after {
 }
 
 .toggle-option input[type="radio"]:checked + .toggle-btn.btn-si {
-  background: linear-gradient(135deg, rgba(29, 104, 255, 0.08), rgba(29, 104, 255, 0.02));
-  border-color: var(--primary-blue);
-  color: var(--primary-blue);
-  box-shadow: 0 4px 14px rgba(29, 104, 255, 0.16);
+  background: linear-gradient(135deg, rgba(10, 104, 168, 0.1), rgba(10, 104, 168, 0.03));
+  border-color: var(--atlas-blue);
+  color: var(--atlas-blue);
+  box-shadow: 0 4px 14px rgba(10, 104, 168, 0.2);
 }
 
 .toggle-option input[type="radio"]:checked + .toggle-btn.btn-no {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.02));
-  border-color: var(--danger-crimson);
-  color: var(--danger-crimson);
-  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.16);
+  background: linear-gradient(135deg, rgba(211, 19, 26, 0.1), rgba(211, 19, 26, 0.03));
+  border-color: var(--atlas-red);
+  color: var(--atlas-red);
+  box-shadow: 0 4px 14px rgba(211, 19, 26, 0.2);
 }
 
-/* ==========================================================================
-   Conditional Box (Owner Info)
-   ========================================================================== */
 .conditional-box {
-  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0fa 100%);
-  border: 2px dashed rgba(29, 104, 255, 0.4);
+  background: linear-gradient(135deg, #f0f7fc 0%, #e3effa 100%);
+  border: 2px dashed rgba(10, 104, 168, 0.4);
   border-radius: clamp(12px, 2vw, var(--radius-md));
   padding: clamp(14px, 3vw, 22px);
   margin-top: 16px;
@@ -796,7 +795,7 @@ body::after {
 .conditional-box-title {
   font-size: clamp(0.85rem, 2.2vw, 0.95rem);
   font-weight: 800;
-  color: var(--primary-blue);
+  color: var(--atlas-blue);
   margin-bottom: 14px;
   display: flex;
   align-items: center;
@@ -809,9 +808,6 @@ body::after {
   flex-shrink: 0;
 }
 
-/* ==========================================================================
-   File Upload Cards & Responsive Grid (Camera vs File Selection)
-   ========================================================================== */
 .upload-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
@@ -846,21 +842,21 @@ body::after {
 }
 
 .upload-card:hover {
-  border-color: var(--primary-blue);
-  background: rgba(29, 104, 255, 0.02);
+  border-color: var(--atlas-blue);
+  background: rgba(10, 104, 168, 0.02);
   box-shadow: var(--shadow-md);
 }
 
 .upload-card.input-error {
-  border-color: var(--danger-crimson);
-  background-color: var(--danger-bg);
+  border-color: var(--atlas-red);
+  background-color: var(--atlas-red-light);
   animation: shake 0.3s ease;
 }
 
 .upload-card.has-file {
   border-style: solid;
   border-color: var(--success-emerald);
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(255, 255, 255, 0.95));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(255, 255, 255, 0.98));
   box-shadow: 0 6px 18px rgba(16, 185, 129, 0.15);
 }
 
@@ -869,7 +865,7 @@ body::after {
   height: clamp(38px, 5.5vw, 44px);
   border-radius: 50%;
   background: #f1f5f9;
-  color: var(--primary-blue);
+  color: var(--atlas-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -881,13 +877,13 @@ body::after {
 
 .upload-card:hover .upload-icon {
   transform: scale(1.06);
-  background: var(--primary-blue-light);
+  background: var(--atlas-blue-light);
 }
 
 .upload-label {
   font-size: clamp(0.82rem, 2vw, 0.92rem);
   font-weight: 800;
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   margin-bottom: 3px;
   line-height: 1.3;
   word-break: break-word;
@@ -899,7 +895,6 @@ body::after {
   margin-bottom: 10px;
 }
 
-/* Choice Buttons: Cámara vs Subir Archivo */
 .upload-choice-actions {
   display: flex;
   gap: 6px;
@@ -938,19 +933,20 @@ body::after {
 }
 
 .btn-choice-cam {
-  background: linear-gradient(135deg, #1d68ff 0%, #0c54e8 100%);
+  background: linear-gradient(135deg, var(--atlas-blue) 0%, var(--atlas-navy) 100%);
   color: #ffffff;
-  box-shadow: 0 3px 10px rgba(29, 104, 255, 0.25);
+  box-shadow: 0 3px 10px rgba(10, 104, 168, 0.3);
 }
 
 .btn-choice-cam:hover {
+  background: linear-gradient(135deg, var(--atlas-blue-bright) 0%, var(--atlas-blue) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(29, 104, 255, 0.35);
+  box-shadow: 0 6px 14px rgba(10, 104, 168, 0.4);
 }
 
 .btn-choice-file {
   background: #f1f5f9;
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   border-color: #cbd5e1;
 }
 
@@ -960,7 +956,6 @@ body::after {
   transform: translateY(-2px);
 }
 
-/* Previews */
 .preview-container {
   width: 100%;
   display: none;
@@ -992,7 +987,7 @@ body::after {
   width: 100%;
   font-weight: 700;
   font-size: clamp(0.75rem, 1.8vw, 0.82rem);
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   box-sizing: border-box;
 }
 
@@ -1026,13 +1021,13 @@ body::after {
   cursor: pointer;
   transition: var(--transition-smooth);
   background: #ffffff;
-  color: var(--primary-blue);
-  border: 1px solid var(--primary-blue);
+  color: var(--atlas-blue);
+  border: 1px solid var(--atlas-blue);
   box-sizing: border-box;
 }
 
 .btn-rechoice:hover, .btn-file-action:hover {
-  background: var(--primary-blue-light);
+  background: var(--atlas-blue-light);
 }
 
 .btn-remove-file, .btn-file-remove {
@@ -1044,13 +1039,13 @@ body::after {
   cursor: pointer;
   transition: var(--transition-smooth);
   background: #ffffff;
-  color: var(--danger-crimson);
-  border: 1px solid var(--danger-crimson);
+  color: var(--atlas-red);
+  border: 1px solid var(--atlas-red);
   box-sizing: border-box;
 }
 
 .btn-remove-file:hover, .btn-file-remove:hover {
-  background: var(--danger-bg);
+  background: var(--atlas-red-light);
 }
 
 .upload-card.has-file .preview-container {
@@ -1083,9 +1078,6 @@ body::after {
   border: 1px solid var(--success-border);
 }
 
-/* ==========================================================================
-   Checkbox Terms & Policies
-   ========================================================================== */
 .checkbox-container, .policy-box {
   display: flex;
   align-items: flex-start;
@@ -1101,14 +1093,14 @@ body::after {
 }
 
 .checkbox-container:hover, .policy-box:hover {
-  border-color: #cbd5e1;
+  border-color: var(--atlas-blue-border);
   background: #ffffff;
 }
 
 .checkbox-container input[type="checkbox"], .policy-checkbox {
   width: 19px;
   height: 19px;
-  accent-color: var(--primary-blue);
+  accent-color: var(--atlas-red);
   cursor: pointer;
   margin-top: 2px;
   flex-shrink: 0;
@@ -1124,16 +1116,13 @@ body::after {
 }
 
 .checkbox-label a, .policy-label a {
-  color: var(--primary-blue);
+  color: var(--atlas-blue);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
   word-break: break-word;
 }
 
-/* ==========================================================================
-   Navigation Action Buttons
-   ========================================================================== */
 .action-buttons {
   display: flex;
   justify-content: space-between;
@@ -1168,7 +1157,7 @@ body::after {
 
 .btn-prev {
   background: #ffffff;
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   border: 1.5px solid #cbd5e1;
   box-shadow: var(--shadow-sm);
 }
@@ -1178,32 +1167,32 @@ body::after {
   border-color: #94a3b8;
 }
 
-.btn-next,
-.btn-submit {
-  background: linear-gradient(135deg, #1d68ff 0%, #0c54e8 100%);
+.btn-next {
+  background: linear-gradient(135deg, var(--atlas-blue) 0%, var(--atlas-navy) 100%);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(29, 104, 255, 0.35);
+  box-shadow: 0 4px 16px rgba(10, 104, 168, 0.35);
   margin-left: auto;
 }
 
-.btn-next:hover,
-.btn-submit:hover {
+.btn-next:hover {
+  background: linear-gradient(135deg, var(--atlas-blue-bright) 0%, var(--atlas-blue) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(29, 104, 255, 0.45);
+  box-shadow: 0 8px 20px rgba(10, 104, 168, 0.45);
 }
 
 .btn-submit {
-  background: linear-gradient(135deg, #1d68ff 0%, #059669 100%);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+  background: linear-gradient(135deg, var(--atlas-red-bright) 0%, var(--atlas-red-dark) 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(211, 19, 26, 0.4);
+  margin-left: auto;
 }
 
 .btn-submit:hover {
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
+  background: linear-gradient(135deg, #ff3838 0%, var(--atlas-red) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(211, 19, 26, 0.55);
 }
 
-/* ==========================================================================
-   Alert Banner & Toast
-   ========================================================================== */
 .alert-box {
   padding: 12px 16px;
   border-radius: clamp(10px, 2vw, var(--radius-md));
@@ -1226,9 +1215,9 @@ body::after {
 }
 
 .alert-danger {
-  background: var(--danger-bg);
-  border: 1.5px solid var(--danger-border);
-  color: #991b1b;
+  background: var(--atlas-red-light);
+  border: 1.5px solid var(--atlas-red-border);
+  color: var(--atlas-red-dark);
 }
 
 .alert-success {
@@ -1237,9 +1226,6 @@ body::after {
   color: #065f46;
 }
 
-/* ==========================================================================
-   Loading Overlay & Responsive Modal
-   ========================================================================== */
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -1248,7 +1234,7 @@ body::after {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(7, 15, 30, 0.92);
+  background: rgba(4, 24, 41, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -1270,8 +1256,8 @@ body::after {
 }
 
 .loading-card {
-  background: rgba(14, 32, 56, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(13, 52, 85, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: clamp(14px, 3vw, var(--radius-lg));
   padding: clamp(22px, 5vw, 36px) clamp(16px, 4vw, 36px);
   text-align: center;
@@ -1302,10 +1288,10 @@ body::after {
   width: clamp(42px, 6vw, 52px);
   height: clamp(42px, 6vw, 52px);
   margin: 3px;
-  border: 3.5px solid var(--primary-blue);
+  border: 3.5px solid var(--atlas-blue-bright);
   border-radius: 50%;
   animation: spinner-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: var(--accent-amber) transparent transparent transparent;
+  border-color: var(--atlas-red-bright) transparent transparent transparent;
 }
 
 .spinner-ring div:nth-child(1) { animation-delay: -0.45s; }
@@ -1327,7 +1313,7 @@ body::after {
 }
 
 .loading-subtext {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.8);
   font-size: clamp(0.78rem, 2vw, 0.88rem);
   margin-top: 6px;
   line-height: 1.4;
@@ -1348,12 +1334,12 @@ body::after {
   align-items: center;
   gap: 6px;
   font-size: clamp(0.74rem, 1.8vw, 0.82rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.3;
 }
 
 .loading-step-item.active {
-  color: var(--accent-gold);
+  color: #7dd3fc;
   font-weight: 700;
 }
 
@@ -1362,9 +1348,6 @@ body::after {
   font-weight: 700;
 }
 
-/* ==========================================================================
-   Success Modal Feedback
-   ========================================================================== */
 .custom-modal-overlay {
   position: fixed;
   top: 0;
@@ -1373,7 +1356,7 @@ body::after {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(7, 15, 30, 0.9);
+  background: rgba(4, 24, 41, 0.92);
   backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
@@ -1432,7 +1415,7 @@ body::after {
   font-family: var(--font-heading);
   font-size: clamp(1.15rem, 3.2vw, 1.38rem);
   font-weight: 800;
-  color: var(--primary-navy);
+  color: var(--atlas-navy);
   margin-bottom: 6px;
   word-break: break-word;
 }
@@ -1446,7 +1429,7 @@ body::after {
 }
 
 .btn-modal-close {
-  background: var(--primary-blue);
+  background: linear-gradient(135deg, var(--atlas-blue) 0%, var(--atlas-navy) 100%);
   color: #ffffff;
   border: none;
   min-height: 46px;
@@ -1462,12 +1445,9 @@ body::after {
 }
 
 .btn-modal-close:hover {
-  background: var(--primary-blue-hover);
+  background: linear-gradient(135deg, var(--atlas-blue-bright) 0%, var(--atlas-blue) 100%);
 }
 
-/* ==========================================================================
-   Live WebRTC Camera Modal (PC / Mobile)
-   ========================================================================== */
 .camera-modal-overlay {
   position: fixed;
   top: 0;
@@ -1476,7 +1456,7 @@ body::after {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(4, 10, 20, 0.96);
+  background: rgba(4, 24, 41, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -1497,8 +1477,8 @@ body::after {
 }
 
 .camera-modal-card {
-  background: #0d1e34;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--atlas-navy-card);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: clamp(14px, 3vw, var(--radius-lg));
   max-width: 560px;
   width: 100%;
@@ -1516,7 +1496,7 @@ body::after {
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   width: 100%;
   box-sizing: border-box;
 }
@@ -1535,12 +1515,12 @@ body::after {
 }
 
 .camera-modal-title svg {
-  color: var(--accent-amber);
+  color: var(--atlas-red-bright);
   flex-shrink: 0;
 }
 
 .btn-camera-close {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   border: none;
   color: #ffffff;
   width: 32px;
@@ -1557,7 +1537,7 @@ body::after {
 }
 
 .btn-camera-close:hover {
-  background: rgba(239, 68, 68, 0.8);
+  background: rgba(211, 19, 26, 0.85);
 }
 
 .camera-stream-wrapper {
@@ -1602,7 +1582,7 @@ body::after {
 .camera-guide-box {
   width: min(85%, 360px);
   height: min(70%, 220px);
-  border: 2px dashed rgba(255, 255, 255, 0.65);
+  border: 2px dashed rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
@@ -1622,7 +1602,7 @@ body::after {
 
 .camera-controls {
   padding: 14px 16px;
-  background: #09172a;
+  background: var(--atlas-navy-deep);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   width: 100%;
   box-sizing: border-box;
@@ -1686,14 +1666,14 @@ body::after {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #1d68ff;
+  background: var(--atlas-red);
   border: 3px solid #ffffff;
   transition: transform 0.15s ease;
 }
 
 .btn-cam-capture:active .btn-cam-shutter-inner {
   transform: scale(0.88);
-  background: #0c54e8;
+  background: var(--atlas-red-dark);
 }
 
 .btn-camera-review {
@@ -1721,17 +1701,14 @@ body::after {
 }
 
 .btn-cam-confirm {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--atlas-blue-bright) 0%, var(--atlas-blue) 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 4px 14px rgba(10, 104, 168, 0.35);
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 .footer-text {
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.68);
   font-size: clamp(0.72rem, 1.8vw, 0.82rem);
   margin-top: clamp(14px, 3vw, 22px);
   font-weight: 500;
@@ -1741,18 +1718,12 @@ body::after {
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Comprehensive Media Queries for 100% Responsiveness & No Scroll
-   ========================================================================== */
-
-/* 1. Standard Laptops & Tablets Landscape (769px - 1199px) */
 @media (min-width: 769px) and (max-width: 1199px) {
   .upload-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* 2. Tablets Portrait & Large Phones (481px - 768px) */
 @media (max-width: 768px) {
   .upload-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1763,7 +1734,6 @@ body::after {
   }
 }
 
-/* 3. Mobile Devices (< 640px) */
 @media (max-width: 640px) {
   body {
     padding: max(10px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
@@ -1805,7 +1775,6 @@ body::after {
   }
 }
 
-/* 4. Small Phones (< 400px) */
 @media (max-width: 400px) {
   body {
     padding: max(8px, env(safe-area-inset-top)) max(6px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(6px, env(safe-area-inset-left));
@@ -1849,7 +1818,6 @@ body::after {
   }
 }
 
-/* 5. Extra Small Phones (< 340px) */
 @media (max-width: 340px) {
   .step-label {
     display: none;
@@ -1958,7 +1926,7 @@ body::after {
           </label>
           <div class="input-wrapper">
             <span class="input-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm-1 14H5c-.55 0-1-.45-1-1v-1c0-1.1 1.9-2 4-2s4 .9 4 2v1c0 .55-.45 1-1 1zm-4-7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 5h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.1-.89-2-2-2zm-1 14H5c-.55 0-1-.45-1-1v-1c0-1.1 1.9-2 4-2s4 .9 4 2v1c0 .55-.45 1-1 1zm-4-7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 5h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg>
             </span>
             <input type="number" id="documento" class="form-control" placeholder="EJ. 1047123456 (Sin puntos ni guiones)" required inputmode="numeric">
           </div>
@@ -2060,7 +2028,7 @@ body::after {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
             Información del Propietario Real del Vehículo
           </div>
-
+          
           <div class="form-group">
             <label class="form-label" for="nombre_propietario">Nombre Completo del Propietario <span class="req">*</span></label>
             <div class="input-wrapper">
@@ -2075,7 +2043,7 @@ body::after {
             <label class="form-label" for="doc_propietario">Cédula del Propietario <span class="req">*</span></label>
             <div class="input-wrapper">
               <span class="input-icon">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm-1 14H5c-.55 0-1-.45-1-1v-1c0-1.1 1.9-2 4-2s4 .9 4 2v1c0 .55-.45 1-1 1zm-4-7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 5h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.1-.89-2-2-2zm-1 14H5c-.55 0-1-.45-1-1v-1c0-1.1 1.9-2 4-2s4 .9 4 2v1c0 .55-.45 1-1 1zm-4-7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 5h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg>
               </span>
               <input type="number" id="doc_propietario" class="form-control" placeholder="NÚMERO DE CÉDULA" inputmode="numeric">
             </div>
@@ -2125,16 +2093,11 @@ body::after {
             
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('cedula_frente', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('cedula_frente', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Archivo
               </button>
             </div>
@@ -2160,16 +2123,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('cedula_respaldo', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('cedula_respaldo', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Archivo
               </button>
             </div>
@@ -2195,16 +2153,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('licencia_frente', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('licencia_frente', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Archivo
               </button>
             </div>
@@ -2230,16 +2183,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('licencia_respaldo', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('licencia_respaldo', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Archivo
               </button>
             </div>
@@ -2265,16 +2213,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('propiedad_frente', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('propiedad_frente', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Archivo
               </button>
             </div>
@@ -2300,16 +2243,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('propiedad_respaldo', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('propiedad_respaldo', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Archivo
               </button>
             </div>
@@ -2335,16 +2273,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('soat', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('soat', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir PDF / Archivo
               </button>
             </div>
@@ -2370,16 +2303,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('tecno', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Usar Cámara
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('tecno', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir PDF / Archivo
               </button>
             </div>
@@ -2429,16 +2357,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('moto_derecha', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Tomar Foto
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('moto_derecha', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Galería
               </button>
             </div>
@@ -2463,16 +2386,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('moto_izquierda', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Tomar Foto
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('moto_izquierda', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Galería
               </button>
             </div>
@@ -2497,16 +2415,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('moto_frente', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Tomar Foto
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('moto_frente', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Galería
               </button>
             </div>
@@ -2531,16 +2444,11 @@ body::after {
 
             <div class="upload-choice-actions">
               <button type="button" class="btn-choice btn-choice-cam" onclick="triggerUpload('moto_trasera', 'cam')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-                  <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                 Tomar Foto
               </button>
               <button type="button" class="btn-choice btn-choice-file" onclick="triggerUpload('moto_trasera', 'file')">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
-                </svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                 Subir Galería
               </button>
             </div>
@@ -2585,7 +2493,9 @@ body::after {
   <!-- Loading Overlay -->
   <div class="loading-overlay" id="loadingOverlay">
     <div class="loading-card">
-      <div class="spinner-ring"><div></div><div></div><div></div><div></div></div>
+      <div class="spinner-ring">
+        <div></div><div></div><div></div><div></div>
+      </div>
       <div class="loading-text" id="loadingTitle">Procesando Registro Vial</div>
       <div class="loading-subtext" id="loadingDesc">Por favor espere mientras comprimimos las imágenes y sincronizamos con Google Drive.</div>
       
@@ -2603,15 +2513,12 @@ body::after {
     <div class="camera-modal-card">
       <div class="camera-modal-header">
         <div class="camera-modal-title">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
-            <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-          </svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
           <span id="cameraModalFieldTitle">Cámara en Vivo</span>
         </div>
         <button type="button" class="btn-camera-close" onclick="closeLiveCamera()">✕</button>
       </div>
-      
+
       <div class="camera-stream-wrapper">
         <video id="cameraVideo" autoplay playsinline muted></video>
         <img id="cameraCapturedImg" alt="Foto Capturada" style="display: none;">
@@ -2661,16 +2568,15 @@ body::after {
     </div>
   </div>
 
+  <!-- Embedded JavaScript Logic -->
   <script>
 /* ==========================================================================
    CONTROL VIAL - SEGURIDAD ATLAS (ZONA CARIBE)
    Lógica JavaScript ES6+ & Multi-step Wizard
    ========================================================================== */
 
-// Configuración de URL del Script en Google Apps Script
 const BACKEND_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw-lnHE2s_g8aXEdWeKOlIKJQiH0VA4rqiFaQt8O3MM5UqRM0uumZVcGVvaB8z5w49rFA/exec";
 
-// Datos de Municipios por Departamento de la Zona Caribe
 const MUNICIPIOS_ZONA_CARIBE = {
   ATLANTICO: [
     "BARRANQUILLA", "BARANOA", "CAMPO DE LA CRUZ", "CANDELARIA", "GALAPA",
@@ -2729,7 +2635,6 @@ const MUNICIPIOS_ZONA_CARIBE = {
   ]
 };
 
-// Nombres descriptivos de etapas
 const STEP_TITLES = [
   "Datos del Conductor",
   "Datos del Vehículo",
@@ -2737,7 +2642,6 @@ const STEP_TITLES = [
   "Fotografías del Vehículo"
 ];
 
-// Nombres legibles de campos para la cámara
 const FIELD_NAMES_MAP = {
   cedula_frente: "Cédula (Frente)",
   cedula_respaldo: "Cédula (Respaldo)",
@@ -2753,21 +2657,18 @@ const FIELD_NAMES_MAP = {
   moto_trasera: "Parte Trasera del Vehículo (Placa)"
 };
 
-// Requerimientos de archivos por paso
 const STEP_REQUIRED_FILES = {
   3: ["cedula_frente", "cedula_respaldo", "licencia_frente", "licencia_respaldo", "propiedad_frente", "propiedad_respaldo", "soat", "tecno"],
   4: ["moto_derecha", "moto_izquierda", "moto_frente", "moto_trasera"]
 };
 
-// Estado Global de la App
 let currentStep = 1;
 const totalSteps = 4;
 const fileStore = {};
 
-// Estado de la Cámara WebRTC en Vivo
 let currentCameraField = null;
 let currentCameraStream = null;
-let currentFacingMode = "environment"; // "environment" o "user"
+let currentFacingMode = "environment";
 let capturedLiveBase64 = null;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -2778,9 +2679,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFormSubmit();
 });
 
-// ==========================================
-// Stepper & Navegación por Pasos
-// ==========================================
 function initStepper() {
   updateStepView();
 }
@@ -2791,7 +2689,6 @@ function goToStep(step) {
     currentStep = step;
     updateStepView();
   } else {
-    // Validar pasos anteriores
     let canProceed = true;
     for (let i = 1; i < step; i++) {
       if (!validateStep(i)) {
@@ -2807,7 +2704,6 @@ function goToStep(step) {
 }
 
 function updateStepView() {
-  // Ocultar todas las tarjetas y mostrar la activa
   document.querySelectorAll(".form-card").forEach((card, index) => {
     card.classList.remove("active");
     if (index + 1 === currentStep) {
@@ -2815,7 +2711,6 @@ function updateStepView() {
     }
   });
 
-  // Actualizar círculos del stepper
   document.querySelectorAll(".step-item").forEach((item, index) => {
     const stepNum = index + 1;
     item.classList.remove("active", "completed");
@@ -2826,7 +2721,6 @@ function updateStepView() {
     }
   });
 
-  // Actualizar títulos e indicadores de porcentaje
   const nameEl = document.getElementById("stepCurrentName");
   const pctBadge = document.getElementById("stepPctBadge");
   const progressBar = document.getElementById("progressBar");
@@ -2845,7 +2739,6 @@ function updateStepView() {
     progressBar.style.width = `${barProgress}%`;
   }
 
-  // Desplazamiento suave hacia arriba
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -2865,9 +2758,6 @@ function prevStep() {
   }
 }
 
-// ==========================================
-// Validaciones por Paso
-// ==========================================
 function validateStep(step) {
   const activeCard = document.querySelector(`.form-card[data-step="${step}"]`);
   if (!activeCard) return true;
@@ -2875,7 +2765,6 @@ function validateStep(step) {
   let isValid = true;
   let firstInvalidInput = null;
 
-  // Validación de inputs tradicionales en Paso 1 y 2
   if (step === 1 || step === 2) {
     const requiredInputs = activeCard.querySelectorAll("[required]");
     requiredInputs.forEach((input) => {
@@ -2898,7 +2787,6 @@ function validateStep(step) {
     });
   }
 
-  // Validación de Archivos y Fotos en Paso 3 y 4
   if (step === 3 || step === 4) {
     const requiredList = STEP_REQUIRED_FILES[step] || [];
     requiredList.forEach((fieldKey) => {
@@ -2916,7 +2804,6 @@ function validateStep(step) {
       }
     });
 
-    // Validar checkbox de políticas en Paso 4
     if (step === 4) {
       const chk = document.getElementById("acepto_politica");
       if (chk && !chk.checked) {
@@ -2961,9 +2848,6 @@ function hideAlert() {
   if (alertBox) alertBox.classList.remove("active");
 }
 
-// ==========================================
-// Selección de Departamento y Municipio
-// ==========================================
 function initDepartmentSelect() {
   const deptSelect = document.getElementById("departamento");
   const muniSelect = document.getElementById("ciudad");
@@ -2988,9 +2872,6 @@ function initDepartmentSelect() {
   }
 }
 
-// ==========================================
-// Conmutador de Propietario (SÍ / NO)
-// ==========================================
 function initOwnerToggle() {
   const propSi = document.getElementById("prop_si");
   const propNo = document.getElementById("prop_no");
@@ -3022,29 +2903,20 @@ function initOwnerToggle() {
   }
 }
 
-// ==========================================
-// Carga y Selección de Archivos (Cámara vs Archivo)
-// ==========================================
-
-// Disparador principal de Cámara o Archivo
 window.triggerUpload = function(fieldKey, source) {
   if (source === "cam") {
-    // Si el navegador soporta WebRTC getUserMedia (PC Webcam o Móvil en Vivo)
     if (navigator.mediaDevices && typeof navigator.mediaDevices.getUserMedia === "function") {
       openLiveCamera(fieldKey);
     } else {
-      // Fallback a input estándar con capture
       const camInput = document.getElementById(`${fieldKey}_cam`);
       if (camInput) camInput.click();
     }
   } else {
-    // Subir Archivo tradicional
     const fileInput = document.getElementById(`${fieldKey}_file`);
     if (fileInput) fileInput.click();
   }
 };
 
-// Cambiar archivo existente
 window.rechooseFile = function(fieldKey) {
   const card = document.querySelector(`.upload-card[data-field="${fieldKey}"]`);
   if (card) {
@@ -3054,7 +2926,6 @@ window.rechooseFile = function(fieldKey) {
   }
 };
 
-// Quitar archivo existente
 window.removeFile = function(fieldKey) {
   delete fileStore[fieldKey];
   const camInput = document.getElementById(`${fieldKey}_cam`);
@@ -3114,16 +2985,12 @@ function initFileUploadPreviews() {
           if (badge) badge.textContent = "✓ PDF listo";
         }
 
-        // Comprimir y convertir a Base64
         fileStore[fieldKey] = await processFileToBase64(file);
       }
     });
   });
 }
 
-// ==========================================
-// Módulo de Cámara WebRTC en Vivo (PC y Móvil)
-// ==========================================
 async function openLiveCamera(fieldKey) {
   currentCameraField = fieldKey;
   const modal = document.getElementById("cameraModal");
@@ -3138,7 +3005,6 @@ async function openLiveCamera(fieldKey) {
     titleEl.textContent = FIELD_NAMES_MAP[fieldKey] ? `Cámara: ${FIELD_NAMES_MAP[fieldKey]}` : "Cámara en Vivo";
   }
 
-  // Resetear estados visuales
   if (videoEl) videoEl.style.display = "block";
   if (capturedImg) { capturedImg.style.display = "none"; capturedImg.src = ""; }
   if (guideOverlay) guideOverlay.style.display = "flex";
@@ -3174,7 +3040,6 @@ async function startCameraStream() {
     }
   } catch (err) {
     console.warn("No se pudo iniciar el stream con facingMode:", currentFacingMode, err);
-    // Intento secundario con cualquier cámara disponible
     try {
       currentCameraStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
       if (videoEl) {
@@ -3184,7 +3049,6 @@ async function startCameraStream() {
     } catch (fallbackErr) {
       closeLiveCamera();
       showAlert("No se pudo acceder a la cámara web. Por favor permita el acceso a la cámara en el navegador o use el botón 'Subir Archivo'.", "danger");
-      // Fallback al explorador/selector
       const camInput = document.getElementById(`${currentCameraField}_cam`);
       if (camInput) camInput.click();
     }
@@ -3247,14 +3111,12 @@ window.confirmLiveSnapshot = function() {
     return;
   }
 
-  // Guardar en fileStore
   const base64Clean = capturedLiveBase64.split(",")[1];
   fileStore[currentCameraField] = {
     base64: base64Clean,
     mimeType: "image/jpeg"
   };
 
-  // Actualizar tarjeta UI
   const card = document.querySelector(`.upload-card[data-field="${currentCameraField}"]`);
   if (card) {
     card.classList.add("has-file");
@@ -3291,7 +3153,6 @@ window.closeLiveCamera = function() {
   currentCameraField = null;
 };
 
-// Compresión y conversión de imagen/PDF a Base64
 async function processFileToBase64(file) {
   if (!file) return null;
 
@@ -3341,9 +3202,6 @@ async function processFileToBase64(file) {
   });
 }
 
-// ==========================================
-// Envío del Formulario al Backend GAS
-// ==========================================
 function initFormSubmit() {
   const form = document.getElementById("formVial");
   if (form) {
@@ -3355,7 +3213,6 @@ function initFormSubmit() {
       const loadingOverlay = document.getElementById("loadingOverlay");
       if (loadingOverlay) loadingOverlay.classList.add("active");
 
-      // Progreso simulado para feedback visual premium
       const lStep2 = document.getElementById("lStep2");
       const lStep3 = document.getElementById("lStep3");
       const lStep4 = document.getElementById("lStep4");
@@ -3405,7 +3262,6 @@ function initFormSubmit() {
           if (modal) modal.classList.add("active");
         };
 
-        // Si corre dentro del entorno de Google Apps Script
         if (typeof google !== "undefined" && google.script && google.script.run) {
           google.script.run
             .withSuccessHandler((res) => {
@@ -3419,7 +3275,6 @@ function initFormSubmit() {
             })
             .procesarFormulario(payload);
         } else {
-          // Si corre en un servidor web externo o localhost usando fetch
           await fetch(BACKEND_SCRIPT_URL, {
             method: "POST",
             mode: "no-cors",
